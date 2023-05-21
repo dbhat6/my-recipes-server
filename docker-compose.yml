@@ -6,11 +6,13 @@ services:
             context: .
             dockerfile: Dockerfile
         image: recipe-server:latest
+        environment:
+          - DB_HOST=mongodb
         ports:
             - 8080:8080
         networks:
             - spring-cloud-network
-    mongo-db:
+    mongodb:
         container_name: my-mongo-db
         image: mongo:latest
         ports:
