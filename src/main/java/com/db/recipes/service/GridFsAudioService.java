@@ -20,10 +20,10 @@ import java.io.IOException;
 @Service
 public class GridFsAudioService {
 
-    private GridFsTemplate gridFsTemplate;
+    private final GridFsTemplate gridFsTemplate;
 
 
-    private GridFsOperations operations;
+    private final GridFsOperations operations;
 
     public GridFsAudioService(GridFsTemplate gridFsTemplate, GridFsOperations operations) {
         this.gridFsTemplate = gridFsTemplate;

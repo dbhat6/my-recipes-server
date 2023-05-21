@@ -13,9 +13,9 @@ import java.io.IOException;
 
 @Service
 public class GridFsImageService {
-    private GridFsTemplate gridFsTemplate;
-    private ImageRepo imageRepo;
-    private GridFsOperations operations;
+    private final GridFsTemplate gridFsTemplate;
+    private final ImageRepo imageRepo;
+    private final GridFsOperations operations;
 
     public GridFsImageService(GridFsTemplate gridFsTemplate, ImageRepo imageRepo, GridFsOperations operations) {
         this.gridFsTemplate = gridFsTemplate;

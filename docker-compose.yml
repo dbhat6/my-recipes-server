@@ -1,0 +1,22 @@
+version: '2'
+services:
+    recipe-server:
+        container_name: recipe-server
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: recipe-server:latest
+        ports:
+            - 8080:8080
+        networks:
+            - spring-cloud-network
+    mongo-db:
+        container_name: my-mongo-db
+        image: mongo:latest
+        ports:
+            - 27017:27017
+        networks:
+            - spring-cloud-network
+networks:
+    spring-cloud-network:
+        driver: bridge
