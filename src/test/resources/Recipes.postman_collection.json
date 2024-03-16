@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "10507d3e-506a-4b3c-870a-f03b7cb9d04f",
+		"name": "Recipes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25457090"
+	},
+	"item": [
+		{
+			"name": "Actuators",
+			"item": [
+				{
+					"name": "Health",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/actuator/health",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actuator",
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/actuator/info",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actuator",
+								"info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Metrics",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/actuator/metrics",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"actuator",
+								"metrics"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Recipe by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/recipes/65f5efdad4f25801ed14cfcc",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"recipes",
+						"65f5efdad4f25801ed14cfcc"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/recipes/65f5ec2510dffe51bde64d2e",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"recipes",
+								"65f5ec2510dffe51bde64d2e"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Create Recipes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Chitranna\",\n    \"serving\": 5,\n    \"steps\": [\n        \"Pour oil and let it heat up a little\",\n        \"Add mustard to it and wait for it to make noise\",\n        \"Add ginger to it and saute a litte\",\n        \"Add onions to it and saute a little and turmeric\",\n        \"Add salt and lemon to it\",\n        \"Mix rice with it and eat\"\n    ],\n    \"ingredients\": {\n        \"Onions\": {\n            \"number\": 2,\n            \"quantityType\": \"NUMBER\"\n        },\n        \"Rice\": {\n            \"number\": 2,\n            \"quantityType\": \"CUP\"\n        },\n        \"Ginger\": {\n            \"number\": 1,\n            \"quantityType\": \"NUMBER\"\n        },\n        \"Chillies\": {\n            \"number\": 2,\n            \"quantityType\": \"NUMBER\"\n        },\n        \"Turmeric\": {\n            \"number\": 1,\n            \"quantityType\": \"TEASPOON\"\n        },\n        \"Mustard Seeds\": {\n            \"number\": 1,\n            \"quantityType\": \"CUP\"\n        },\n        \"Lemon\": {\n            \"number\": 1,\n            \"quantityType\": \"NUMBER\"\n        }\n    },\n    \"image\": {\n        \"binaryId\": \"65f5eefcd4f25801ed14cfcb\"\n    },\n    \"voiceRecording\": {\n        \"binaryId\": \"65f5ee8cd4f25801ed14cfc8\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/recipes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"recipes"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Testing\",\n    \"serving\": 5,\n    \"steps\": [\n        \"1. Fry it\",\n        \"2. Eat it\"\n    ],\n    \"ingredients\": {\n        \"Rice\": {\n            \"number\": 3,\n            \"quantityType\": \"CUP\"\n        }\n    },\n    \"image\": {\n        \"binaryId\": \"6469e656435e571bc626d605\"\n    },\n    \"voiceRecording\": {\n        \"binaryId\": \"65f5cfcaecad8c11ec373522\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/recipes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"recipes"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Create Image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/deepakbhat/Dump/check.png"
+						},
+						{
+							"key": "title",
+							"value": "Check",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/image",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"image"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Image by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/image/6469e656435e571bc626d605",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"image",
+						"6469e656435e571bc626d605"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Audio",
+			"request": {
+				"auth": {
+					"type": "awsv4",
+					"awsv4": [
+						{
+							"key": "secretKey",
+							"value": "asdasdkj1h23iuashdjb32",
+							"type": "string"
+						},
+						{
+							"key": "accessKey",
+							"value": "asdasd123ads",
+							"type": "string"
+						},
+						{
+							"key": "addAuthDataToQuery",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/deepakbhat/Dump/76 Mount Anville Park.m4a"
+						},
+						{
+							"key": "title",
+							"value": "Audio",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/audio",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"audio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Audio by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/audio/65f5cfcaecad8c11ec373522",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"audio",
+						"65f5cfcaecad8c11ec373522"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

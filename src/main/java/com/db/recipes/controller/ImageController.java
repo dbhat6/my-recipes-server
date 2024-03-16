@@ -1,6 +1,6 @@
 package com.db.recipes.controller;
 
-import com.db.recipes.model.ImageData;
+import com.db.recipes.model.mongo.ImageData;
 import com.db.recipes.service.GridFsImageService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,7 +18,7 @@ public class ImageController {
 
     private final GridFsImageService gridFsImageService;
 
-    @Autowired(required = false)
+    @Autowired
     public ImageController(GridFsImageService gridFsImageService) {
         this.gridFsImageService = gridFsImageService;
     }

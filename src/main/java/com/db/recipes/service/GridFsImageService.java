@@ -1,6 +1,6 @@
 package com.db.recipes.service;
 
-import com.db.recipes.model.ImageData;
+import com.db.recipes.model.mongo.ImageData;
 import com.db.recipes.repo.ImageRepo;
 import org.bson.BsonBinarySubType;
 import org.bson.types.Binary;

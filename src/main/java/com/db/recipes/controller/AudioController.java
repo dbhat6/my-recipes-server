@@ -1,6 +1,6 @@
 package com.db.recipes.controller;
 
-import com.db.recipes.model.AudioData;
+import com.db.recipes.model.mongo.AudioData;
 import com.db.recipes.service.GridFsAudioService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,7 +18,7 @@ public class AudioController {
 
     private final GridFsAudioService gridFsAudioService;
 
-    @Autowired(required = false)
+    @Autowired
     public AudioController(GridFsAudioService gridFsAudioService) {
         this.gridFsAudioService = gridFsAudioService;
     }

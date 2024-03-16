@@ -1,24 +1,24 @@
 version: '2'
 services:
-    recipe-server:
-        container_name: recipe-server
-        build:
-            context: .
-            dockerfile: Dockerfile
-        image: recipe-server:latest
-        environment:
-          - DB_HOST=mongodb
-        ports:
-            - 8080:8080
-        networks:
-            - spring-cloud-network
-    mongodb:
-        container_name: my-mongo-db
-        image: mongo:latest
-        ports:
-            - 27017:27017
-        networks:
-            - spring-cloud-network
+  recipe-server:
+    container_name: recipe-server
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: recipe-server:latest
+    environment:
+      - DB_HOST=mongodb
+    ports:
+      - 8080:8080
+    networks:
+      - spring-cloud-network
+  mongodb:
+    container_name: my-mongo-db
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    networks:
+      - spring-cloud-network
 networks:
-    spring-cloud-network:
-        driver: bridge
+  spring-cloud-network:
+    driver: bridge

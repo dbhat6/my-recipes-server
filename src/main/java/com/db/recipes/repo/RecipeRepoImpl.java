@@ -1,6 +1,6 @@
 package com.db.recipes.repo;
 
-import com.db.recipes.model.Recipes;
+import com.db.recipes.model.mongo.Recipes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;

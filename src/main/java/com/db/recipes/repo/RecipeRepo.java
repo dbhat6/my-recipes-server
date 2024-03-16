@@ -1,6 +1,6 @@
 package com.db.recipes.repo;
 
-import com.db.recipes.model.Recipes;
+import com.db.recipes.model.mongo.Recipes;
 
 import java.util.List;
 
